@@ -22,9 +22,9 @@ const lexiRed = "#ff0000";
 
 function preload() {
 
-let url = "https://twitter.com/search?f=realtime&q=(%23lexicology)&src=typed_query";
- result = loadJSON(url);//The URL is sent to the loadJSON that returns the data to the result variable
- console.log(result);
+// let url = "https://twitter.com/search?f=realtime&q=(%23lexicology)&src=typed_query";
+//  result = loadJSON(url);//The URL is sent to the loadJSON that returns the data to the result variable
+//  console.log(result);
 
   // console.log(TWITTER_BEARER_TOKEN);
   //
