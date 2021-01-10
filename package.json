@@ -1,0 +1,19 @@
+{
+  "name": "lexicology",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakeDWarren/Lexicology.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JakeDWarren/Lexicology/issues"
+  },
+  "homepage": "https://github.com/JakeDWarren/Lexicology#readme"
+}
