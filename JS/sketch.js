@@ -5,7 +5,7 @@ var h = window.innerHeight*0.9;
 let user =  "JakeDWarren"
 let userIDResult;
 let twitterResult;
-let TWITTER_BEARER_TOKEN = ${secrets.Twitter_Bearer_Token};
+let TWITTER_BEARER_TOKEN = secrets.Twitter_Bearer_Token;
 let swipeLang = true;
 
 const lexiBlue = "#00b0f0";
