@@ -5,7 +5,7 @@ var h = window.innerHeight*0.9;
 let user =  "JakeDWarren"
 let userIDResult;
 let twitterResult;
-let BEARER_TOKEN;
+let TWITTER_BEARER_TOKEN = ${{ secrets.Twitter_Bearer_Token }};
 let swipeLang = true;
 
 const lexiBlue = "#00b0f0";
@@ -16,13 +16,15 @@ const lexiRed = "#ff0000";
 
 function preload() {
 
+  console.log(TWITTER_BEARER_TOKEN);
+
   const TwitterIDSettings = {
     "async": true,
     "crossDomain": true,
     "url": "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=" + user,
     "method": "GET",
     "headers": {
-      "Authorization": "Bearer " + ${{ secrets.Twitter_Bearer_Token }},
+      "Authorization": "Bearer " + TWITTER_BEARER_TOKEN,
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
