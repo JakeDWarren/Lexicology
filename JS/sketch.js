@@ -1,11 +1,17 @@
+
 // Global Variables
 var canvas;
 var w = window.innerWidth;
 var h = window.innerHeight*0.9;
+
+
 let user =  "JakeDWarren"
 let userIDResult;
 let twitterResult;
-let TWITTER_BEARER_TOKEN = secrets.Twitter_Bearer_Token;
+// let TWITTER_BEARER_TOKEN = secrets.Twitter_Bearer_Token;
+let result;
+
+
 let swipeLang = true;
 
 const lexiBlue = "#00b0f0";
@@ -16,25 +22,29 @@ const lexiRed = "#ff0000";
 
 function preload() {
 
-  console.log(TWITTER_BEARER_TOKEN);
+let url = "https://twitter.com/search?f=realtime&q=(%23lexicology)&src=typed_query";
+ result = loadJSON(url);//The URL is sent to the loadJSON that returns the data to the result variable
+ console.log(result);
 
-  const TwitterIDSettings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=" + user,
-    "method": "GET",
-    "headers": {
-      "Authorization": "Bearer " + TWITTER_BEARER_TOKEN,
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
-    }
-  };
-
-  $.ajax(TwitterIDSettings).done(function (response) {
-    userIDResult = response;
-    console.log(response);
-  });
+  // console.log(TWITTER_BEARER_TOKEN);
+  //
+  // const TwitterIDSettings = {
+  //   "async": true,
+  //   "crossDomain": true,
+  //   "url": "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=" + user,
+  //   "method": "GET",
+  //   "headers": {
+  //     "Authorization": "Bearer " + TWITTER_BEARER_TOKEN,
+  //     "Access-Control-Allow-Origin": "*",
+  //     "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
+  //     "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+  //   }
+  // };
+  //
+  // $.ajax(TwitterIDSettings).done(function (response) {
+  //   userIDResult = response;
+  //   console.log(response);
+  // });
 
 }
 
