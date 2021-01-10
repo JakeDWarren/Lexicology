@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JakeDWarren/Lexicology/issues"
   },
-  "homepage": "https://github.com/JakeDWarren/Lexicology#readme"
+  "homepage": "https://github.com/JakeDWarren/Lexicology#readme",
+  "dependencies": {
+    "p5": "^1.2.0"
+  }
 }
