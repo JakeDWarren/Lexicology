@@ -4,7 +4,6 @@
   var canvas;
   var w = document.getElementById('sketchContainer').clientWidth;
   var h = document.getElementById('sketchContainer').clientHeight
-  //window.innerHeight*0.9;
 
   // Text state (Swipe language or Latin-derived)
   let swipeLang = true;
